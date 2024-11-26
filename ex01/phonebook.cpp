@@ -6,7 +6,7 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:49:12 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/26 17:23:55 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/26 18:15:56 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void phonebook::search_contact(){
                 return;
         }
 
-        // Exibe os cabeçalhos das colunas
         std::cout << std::setw(10) << std::right << "Index" 
                 << "|"
                 << std::setw(10) << std::right << "First Name" 
@@ -54,8 +53,7 @@ void phonebook::search_contact(){
                 << "|"
                 << std::setw(10) << std::right << "Nickname" 
                 << std::endl;
-        
-        // Exibe os contatos
+
         for (int i = 0; i < index; ++i) {
                 std::cout << std::setw(10) << std::right << i 
                         << "|"
@@ -67,15 +65,16 @@ void phonebook::search_contact(){
                         << std::endl;
         }
 
-        // Solicita o índice do contato
         int index_to_display;
         std::cout << "Enter the index of the contact to display: ";
         std::cin >> index_to_display;
-
-        if (index_to_display < 0 || index_to_display >= index) {
+        if (index_to_display < 0 || index_to_display >= index || std::cin.fail()) {
                 std::cout << "Invalid index." << std::endl;
+        if(std::cin.fail()) {
+                std::cin.clear();
+                std::cin.ignore(10000, '\n');
+        }
         } else {
-                // Exibe o contato completo
                 std::cout << "Contact Information:" << std::endl;
                 std::cout << "First Name: " << contacts[index_to_display].get_first_name() << std::endl;
                 std::cout << "Last Name: " << contacts[index_to_display].get_last_name() << std::endl;

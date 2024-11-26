@@ -2,7 +2,6 @@ NAME = phonebook
 
 SRCS = main.cpp phonebook.cpp
 	
-
 CXX = g++
 CXXFLAGS = -Wall -Wextra -g -std=c++98
 
