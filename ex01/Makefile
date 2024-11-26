@@ -1,9 +1,10 @@
 NAME = phonebook
 
-SRCS = main.cpp
+SRCS = main.cpp phonebook.cpp
+	
 
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++98
+CXXFLAGS = -Wall -Wextra -g -std=c++98
 
 all: $(NAME)
 
