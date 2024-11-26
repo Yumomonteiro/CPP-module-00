@@ -6,7 +6,7 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:18:21 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/26 17:08:48 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:21:22 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
         (void)argv;
         while (!std::cin.eof())
         {
-                
                 std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
                 std::cin >> command;
                 if (command == "ADD")
