@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 18:28:21 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/26 19:14:02 by yude-oli         ###   ########.fr       */
+/*   Created: 2024/11/27 13:05:45 by yude-oli          #+#    #+#             */
+/*   Updated: 2024/11/27 13:18:46 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#ifndef WEAPON_H
+# define WEAPON_H
+# include <string.h>
+# include <iostream>
 
-int main(void)
-{
-        Zombie zombie("Zombie1");
-        zombie.announce();
-}
+class   Weapon{
+        
+        private:
+                std::string type;
+                
+
+
+        public:
+                Weapon(std::string);
+                ~Weapon(void);
+                std::string getType() const { return type; }
+                void setType( std::string new_type);
+  
+};
+
+#endif
