@@ -6,21 +6,25 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:18:21 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/26 17:21:22 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/28 12:09:18 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "Phonebook.hpp"
 
 
 int main(int argc, char *argv[])
 {
         std::string command;
         phonebook book;
-        (void)argc;
         (void)argv;
+        if(argc != 1)
+        {
+                std::cout << "wrong args execute ./phonebook " << std::endl;
+                return 0;    
+        }   
         while (!std::cin.eof())
         {
                 std::cout << "Enter a command (ADD, SEARCH, EXIT): ";

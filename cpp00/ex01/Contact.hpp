@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:33:51 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/26 17:53:40 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:35:37 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,20 @@ class   contact{
                 std::string _phone_number;
                 std::string _secret;
         public:
-                contact(){}
-                contact(std::string first_name, std::string last_name, std::string nickname, std::string phone_number, std::string secret) : _first_name(first_name), _last_name(last_name), _nickname(nickname), _phone_number(phone_number), _secret(secret) {}
                 //getters
-                std::string get_first_name() const { return _first_name; }
-                std::string get_last_name() const { return _last_name; }
-                std::string get_nickname() const { return _nickname; }
-                std::string get_phone_number() const { return _phone_number; }
-                std::string get_secret() const { return _secret; }       
-};
+                std::string get_first_name() const;
+                std::string get_last_name() const;
+                std::string get_nickname() const;
+                std::string get_phone_number() const;
+                std::string get_secret() const; 
+
+                //setters
+                void set_first_name(const std::string &first_name);
+                void set_last_name(const std::string &last_name);
+                void set_nickname(const std::string &nickname);
+                void set_phone_number(const std::string &phone_number);
+                void set_secret(const std::string &secret);
+        };
 
 
 #endif
