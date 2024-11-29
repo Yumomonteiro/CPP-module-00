@@ -6,17 +6,21 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:49:12 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/28 15:55:02 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:32:50 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 #include <iostream>
 
+
+phonebook::phonebook()
+{
+        index = 0;
+}
+phonebook::~phonebook(){}
+
 void phonebook::add_contact() {
-        
-        if (index >= 8)
-                index = 7;
         
         std::string first_name, last_name, nickname, phone_number, secret;
 
@@ -42,19 +46,19 @@ void phonebook::add_contact() {
         std::cout << "Enter the darkest secret: ";
         std::cin >> secret;
 
-        contacts[index].set_first_name(first_name);
-        contacts[index].set_last_name(last_name);
-        contacts[index].set_nickname(nickname);
-        contacts[index].set_phone_number(phone_number);
-        contacts[index].set_secret(secret);
+        contacts[index % 8].set_first_name(first_name);
+        contacts[index % 8].set_last_name(last_name);
+        contacts[index % 8].set_nickname(nickname);
+        contacts[index % 8].set_phone_number(phone_number);
+        contacts[index % 8].set_secret(secret);
         
-        index++;
         std::cout << "Contact added successfully!" << std::endl;
+        index++;
 }
 
 void phonebook::search_contact(){
 
-        if (index == 0) {
+       if (index == 0 && contacts[0].get_first_name().empty()) {
                 std::cout << "No contacts available." << std::endl;
                 return;
         }

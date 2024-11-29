@@ -6,12 +6,13 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 11:53:42 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/28 15:38:31 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:37:40 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
-
+ contact::contact(){}
+ contact::~contact(){}
 
 std::string contact::get_first_name() const {
         return _first_name;

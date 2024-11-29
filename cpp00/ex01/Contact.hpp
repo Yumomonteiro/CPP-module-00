@@ -6,7 +6,7 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:33:51 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/28 15:35:37 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/11/29 18:36:35 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ class   contact{
                 std::string _secret;
         public:
                 //getters
+                contact();
+                ~contact();
                 std::string get_first_name() const;
                 std::string get_last_name() const;
                 std::string get_nickname() const;
