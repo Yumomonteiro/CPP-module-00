@@ -6,7 +6,7 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:06:24 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/27 13:43:22 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:36:18 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ class   HumanB{
         public:
                 HumanB(std::string name);
                 ~HumanB(void);
-                std::string getName() const { return _name; }
-                std::string getWeapon() const { return _weapon; }
+                std::string getName() const;
                 void    attack(void);
                 void    setWeapon(Weapon &weapon);
 

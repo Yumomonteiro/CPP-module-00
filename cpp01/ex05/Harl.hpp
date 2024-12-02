@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 13:07:20 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/12/02 12:59:57 by yude-oli         ###   ########.fr       */
+/*   Created: 2024/12/02 18:05:00 by yude-oli          #+#    #+#             */
+/*   Updated: 2024/12/02 18:08:36 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+#include <string>
 
-#include "Weapon.hpp"
+class   Harl
+{
+        private:
 
-#include "Weapon.hpp"
+                void debug( void );
+                void info( void );
+                void warning( void );
+                void error( void );
 
-Weapon::Weapon(std::string type) : type(type) {}
+        public:
 
-Weapon::~Weapon(void) {}
-
-std::string Weapon::getType() const {
-    return this->type;
-}
-
-void Weapon::setType(std::string new_type) {
-    this->type = new_type;
-}
-
-
-
+                void complain( std::string level );
+};

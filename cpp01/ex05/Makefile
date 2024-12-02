@@ -1,9 +1,9 @@
-NAME = zombie
+NAME = harl
 
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp
 	
 CXX = c++
-CXXFLAGS = -Wall -Wextra -g -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
 all: $(NAME)
 
