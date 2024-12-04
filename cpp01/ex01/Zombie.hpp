@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: yuriaco <yuriaco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 11:49:14 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/11/27 12:29:49 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/12/04 11:45:43 by yuriaco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ class   Zombie{
 
                 void  announce( void );
                 void  setName(std::string name);
-
-                std::string getName() const { return _name; }
+                std::string getName() const; 
 };
 
 Zombie  *zombieHorde(int N, std::string name);

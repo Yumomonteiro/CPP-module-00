@@ -6,7 +6,7 @@
 /*   By: yuriaco <yuriaco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 11:03:57 by yuriaco           #+#    #+#             */
-/*   Updated: 2024/12/04 12:47:35 by yuriaco          ###   ########.fr       */
+/*   Updated: 2024/12/04 12:06:51 by yuriaco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,30 +37,37 @@ void Harl::error( void )
 }
 
 void Harl::complain(std::string level) {
-    
     void (Harl::*f)(void);
-    
+
     if (level == "DEBUG" || level == "INFO" || level == "WARNING" || level == "ERROR")
     {
         switch (level[0]) {
         case 'D':
+            std::cout << "\n[DEBUG]" << std::endl;
             f = &Harl::debug;
-            break;
+            (this->*f)();
+            // fall through
+            
         case 'I':
+            std::cout << "\n[INFO]" << std::endl;
             f = &Harl::info;
-            break;
+            (this->*f)();
+            // fall through
+            
         case 'W':
+            std::cout << "\n[WARNING]" << std::endl;
             f = &Harl::warning;
-            break;
+            (this->*f)();
+            // fall through
+            
         case 'E':
+            std::cout << "\n[ERROR]" << std::endl;
             f = &Harl::error;
-            break;
-        default:
-            std::cout << "Invalid level: " << level << std::endl;
-            return;
+            (this->*f)();
+            // fall through
         }
-        (this->*f)();
     }
-        else 
-            std::cout << "invalid input" << std::endl;
+    else
+        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+
 }

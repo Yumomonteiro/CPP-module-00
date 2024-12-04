@@ -1,6 +1,6 @@
-NAME = zombie
+NAME = harlFIlter
 
-SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+SRCS = main.cpp Harl.cpp
 	
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98

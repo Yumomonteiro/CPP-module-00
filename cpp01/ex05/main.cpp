@@ -6,7 +6,7 @@
 /*   By: yuriaco <yuriaco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:04:41 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/12/03 11:24:02 by yuriaco          ###   ########.fr       */
+/*   Updated: 2024/12/04 12:48:11 by yuriaco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ int main(void)
 {
     Harl harl;
 
-    harl.complain("debug");
-    harl.complain("info");
-    harl.complain("warning");
-    harl.complain("error");
-    harl.complain("unknown");
+    harl.complain("DEBUG");
+    harl.complain("INFO");
+    harl.complain("WARNING");
+    harl.complain("ERROR");
 
     return 0;
 }

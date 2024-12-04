@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yuriaco <yuriaco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/27 11:50:09 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/12/04 11:46:10 by yuriaco          ###   ########.fr       */
+/*   Created: 2024/12/02 18:04:41 by yude-oli          #+#    #+#             */
+/*   Updated: 2024/12/04 12:44:44 by yuriaco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-Zombie::Zombie() : _name("Unnamed Zombie") {}
+#include "Harl.hpp"
 
-void Zombie::announce( void ){
-        std::cout << _name << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-Zombie::~Zombie()
+int main(void)
 {
-    std::cout << _name << " is destroyed!" << std::endl;
+    Harl harl;
+
+    harl.complain("WARNING");
+    return 0;
 }
-
-void	Zombie::setName( std::string name ) {
-	_name = name;
-}
-
-std::string Zombie::getName() const { return _name; }
-

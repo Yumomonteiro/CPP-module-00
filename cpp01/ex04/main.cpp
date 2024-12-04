@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: yuriaco <yuriaco@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 16:27:07 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/12/02 17:27:19 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/12/04 12:39:42 by yuriaco          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,12 @@ int main(int ac, char *argv[]) {
     std::string line;
     while (std::getline(inputFile, line)) {
         size_t pos = 0;
-        
+
+
         while ((pos = line.find(firstString, pos)) != std::string::npos) {
             line = line.substr(0, pos) + secondString + line.substr(pos + firstString.length());
             pos += secondString.length();
         }
-
-        // Escreve a linha
         outputFile << line << std::endl;
     }
 
