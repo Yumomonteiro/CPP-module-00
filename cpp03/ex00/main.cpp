@@ -6,7 +6,16 @@
 /*   By: yude-oli <yude-oli@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:02:02 by yude-oli          #+#    #+#             */
-/*   Updated: 2024/12/11 15:02:07 by yude-oli         ###   ########.fr       */
+/*   Updated: 2024/12/13 12:41:28 by yude-oli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+int main()
+{
+        ClapTrap claptrap("Claptrap");
+        
+        
+        return 0;
+}

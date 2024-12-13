@@ -1,6 +1,6 @@
 NAME = fixed
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp
 	
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
