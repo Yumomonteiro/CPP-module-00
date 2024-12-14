@@ -1,6 +1,6 @@
 NAME = ClapTrap
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 	
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
